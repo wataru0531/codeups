@@ -1,0 +1,111 @@
+/***************************************************************
+
+.p-single
+
+***************************************************************/
+@use '../global' as g;
+
+.p-single__inner{
+  padding-right: g.rem(20);
+  padding-left: g.rem(20);
+  margin-right: auto;
+  margin-left: auto;
+  
+  @include g.mq('tab'){
+    padding-right: g.rem(25);
+    padding-left: g.rem(25);
+    width: 100%;
+    max-width: g.rem(850);
+  }
+}
+
+.p-single__title{
+  font-size: g.rem(20);
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    font-size: g.rem(23);
+    line-height: 1.52173913043;
+    letter-spacing: 0.01739130434em;
+  }
+}
+
+.p-single__box{
+  margin-top: g.rem(16);
+  display: flex;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(32);
+  }
+}
+
+.p-single__time{
+  margin-right: g.rem(24);
+  padding-top: g.rem(10);
+  display: block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  color: g.$white;
+}
+
+.p-single__category{
+  padding-top: g.rem(9);
+  padding-bottom: g.rem(9);
+  padding-right: g.rem(18);
+  padding-left: g.rem(18);
+  display: inline-block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.125em;
+  color: g.$white;
+  border: g.rem(1) solid g.$white;
+}
+
+.p-single__img{
+  margin-top: g.rem(17);
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  position: relative;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(32);
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.p-single__img::before{
+  content: '';
+  display: block;
+  padding-top: 66.933333%;
+
+  @include g.mq('tab'){
+    padding-top: 53.375%;
+  }
+}
+
+.p-single__img > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-single__contents{
+  margin-top: g.rem(24);
+  
+  @include g.mq('tab'){
+    margin-top: g.rem( 32);
+  }
+}

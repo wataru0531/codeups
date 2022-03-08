@@ -1,0 +1,29 @@
+/***************************************************************
+
+.p-blog-archive
+
+***************************************************************/
+@use '../global' as g;
+
+.p-blog-archive__cards .p-cards-list-03__card{
+  position: relative;
+}
+
+.p-blog-archive__cards .p-cards-list-03__card:first-child::after{
+  content: 'New';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: g.rem(60);
+  height: g.rem(60);
+  font-size: g.rem( 16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  color: g.$text;
+  border-radius: 50%;
+  background-color: g.$bgNew;
+  position: absolute;
+  top: g.rem(-16);
+  left: g.rem(-15);
+}

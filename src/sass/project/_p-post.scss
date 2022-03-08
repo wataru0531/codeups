@@ -1,0 +1,138 @@
+/***************************************************************
+
+.p-post    ブログ記事内のcssカスタマイズ
+
+***************************************************************/
+@use '../global' as g;
+
+.p-post p{
+  margin-bottom: g.rem(24);
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 2.1875;
+  letter-spacing: 0.025em;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    margin-bottom: g.rem(32);
+  }
+}
+
+// 見出しh2
+.p-post h2{
+  margin-bottom: g.rem(24);
+  padding-left: g.rem(6);
+  font-size: g.rem(20);
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  color: g.$white;
+  border-left: g.rem(3) solid g.$white;
+
+  @include g.mq('tab'){
+    margin-bottom: g.rem(32);
+  }
+}
+
+// 見出しh3
+.p-post h3{
+  margin-bottom: g.rem(24);
+  padding-left: g.rem(9);
+  display: inline-block;
+  font-size: g.rem(18);
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.111111em;
+  color: g.$white;
+  position: relative;
+
+  @include g.mq('tab'){
+    margin-bottom: g.rem(32);
+  }
+}
+
+.p-post h3::before{ // 白線
+  content: '';
+  display: block;
+  width: calc(100% - g.rem(9));
+  height: g.rem(3);
+  background-color: g.$white;
+  position: absolute;
+  bottom: g.rem(-2);
+  left: g.rem(10);
+}
+
+.p-post h3::after{ // 黄線
+  content: '';
+  display: block;
+  width: 33.640552%;
+  height: g.rem(3);
+  background-color: g.$underLine;
+  position: absolute;
+  bottom: g.rem(-2);
+  left: g.rem(10);
+
+  @include g.mq('tab'){
+    width: 31.048387%;
+  }
+}
+
+// 画像
+.p-post figure{
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  margin-bottom: g.rem(24);
+  overflow: hidden;
+  position: relative;
+
+  @include g.mq('tab'){
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: g.rem(32);
+  }
+}
+
+.p-post figure::before{
+  content: '';
+  display: block;
+  padding-top: 66.933333%;
+
+  @include g.mq('tab'){
+    padding-top: 53.375%;
+  }
+}
+
+.p-post figure > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// ul
+.p-post ul{
+  margin-bottom: g.rem(24);
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 2.1875;
+  letter-spacing: 0.025em;
+  color: g.$white;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+// ol
+.p-post ol{
+  margin-bottom: g.rem(24);
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 2.1875;
+  letter-spacing: 0.025em;
+  color: g.$white;
+  list-style-type: decimal;
+  list-style-position: inside;
+}

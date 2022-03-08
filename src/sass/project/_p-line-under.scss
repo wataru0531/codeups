@@ -1,0 +1,20 @@
+/***************************************************************
+
+.p-line-under
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-line-under__background{
+  width: 100%;
+  height: g.rem(1400);
+  background: linear-gradient(to right bottom, transparent 50%, g.$yellow 50% calc(50% + g.rem(1)), transparent calc(50% + g.rem(1)) 100%);
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include g.mq('tab'){
+    height: g.rem(1280);
+  }
+}

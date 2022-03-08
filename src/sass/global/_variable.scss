@@ -1,0 +1,75 @@
+// 色
+$white: #fff; // 背景
+$black: #000;
+$redError: #FF5757;
+
+// テキスト色
+// $text-color: #2f2c2a;
+$text: #333;
+$underLine: #FFEA2E;
+$yellow: #f9f871;
+$formActive: #3D3D3D;
+$formPlaceHolder: #979797;
+$notFoundYellow: rgb(255, 234, 46);
+
+// 背景色やレイヤー
+// $layer: #111111;
+$lineYellow: #F9F871;
+
+// 背景色
+$bg: rgb(17, 17, 17);
+$bgSection: #3D3D3D; // トップページの制作実績、企業概要などのセクション背景色
+$bgCategory: #FFEA2E;
+$bgBtn: #333333;
+$bgCard: #333333;
+$bgNew: #FFBA6A;
+$bgArrow: #333333;
+$bgRelation: #333333;
+$bgError: #FFDCDC;
+
+// swiper
+$bulletGray: #C4C4C4;
+$bulletActive: #F9F871;
+$swiperArrow: #FFEA2E;
+
+// ブログ記事内で仕様
+
+// マウスホバー
+$opacity: 0.7; // 透過度
+
+// フォント
+$font-family-base: 'Noto Sans JP', sans-serif; // ベースフォント。全体へ適用するフォント。
+$font-family-sub: 'Noto Serif JP', sans-serif; // 英語など適用したい部分に上書きしたいフォント。
+$font-size-base: 16px; // ベースフォントサイズ
+$font-weight-base: 400; // ベースフォントウェイト
+$lh: 1.6; // ベース行間
+
+
+// レイアウト
+$l-tab: 768px; // タブレットサイズ
+
+// $l-first: 800px;
+// $l-second: 900px;
+// $l-third: 1000px;
+
+$l-inner: 1100px; // インナー幅
+$l-pc: 1280px; // パソコン幅
+
+
+// ブレークポイント
+$breakpoints: (
+	"sp": "screen and (min-width: 375px)",
+	"tab": "screen and (min-width: #{$l-tab})",
+
+	// "first": "screen and (min-width: #{$l-first})",
+	// "second": "screen and (min-width: #{$l-second})",
+	// "third": "screen and (min-width: #{$l-third})",
+
+	"pc": "screen and (min-width: #{$l-inner})",
+	"lg": "screen and (min-width: #{$l-pc})",
+);
+
+
+// パディング
+$padding-sp: 20px; // スマホ
+$padding-pc: 25px; // タブレット以降

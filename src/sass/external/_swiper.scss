@@ -1,0 +1,291 @@
+/***************************************************************
+
+.swiper  上書き
+
+***************************************************************/
+@use '../global/' as g;
+
+/***************************************************************
+
+.p-mv-swiper メインビジュアル
+
+***************************************************************/
+.p-mv-swiper{
+  width: 100%;
+  height: inherit;
+}
+
+.p-mv-swiper .swiper-wrapper{
+  width: 100%;
+  height: inherit;
+}
+
+.p-mv-swiper .swiper-slide{
+  width: 100%;
+  height: inherit;
+}
+
+.p-mv-swiper .swiper-img{
+  width: 100%;
+  height: inherit;
+}
+
+.p-mv-swiper img{
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+@keyframes zoomUp {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.15);
+  }
+}
+
+.p-mv-swiper .swiper-slide-active .swiper-img,
+.p-mv-swiper .swiper-slide-duplicate-active .swiper-img,
+.p-mv-swiper .swiper-slide-prev .swiper-img{
+  animation-name: zoomUp;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+
+/***************************************************************
+
+.p-works-swiper　トップページ 制作実績
+
+***************************************************************/
+.p-works-swiper{
+  overflow: visible;
+  position: relative;
+}
+
+// 薄暗いカバー
+.p-works-swiper::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, .2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.p-works-swiper .swiper-slide{
+  overflow: hidden;
+  position: relative;
+}
+
+.p-works-swiper .swiper-slide::after{
+  content: '';
+  display: block;
+  padding-top: 69.6%;
+
+  @include g.mq('tab'){
+    padding-top: 69.838420107%;
+  }
+}
+
+.p-works-swiper .swiper-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-works-swiper .swiper-pagination{
+  bottom: g.rem(-23);
+
+  @include g.mq('tab'){
+    bottom: g.rem(-31);
+  }
+}
+
+.p-works-swiper .swiper-pagination-bullet{
+  background-color: g.$bulletGray;
+}
+
+.p-works-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color: g.$bulletActive;
+}
+
+.swiper-pagination-bullet .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin-right: g.rem(5.5);
+  margin-left: g.rem(5.5);
+}
+// .swiper-pagination-bullet-active
+
+
+
+/***************************************************************
+
+.p-works-single-swiper　制作実績詳細 メインスライダー
+
+***************************************************************/
+
+.p-works-single-swiper .swiper-slide{
+  overflow: hidden;
+  position: relative;
+}
+
+.p-works-single-swiper .swiper-slide::before{
+  content: '';
+  display: block;
+  padding-top: 66.933333%;
+
+  @include g.mq('tab'){
+    padding-top: 53.441802252%;
+  }
+}
+
+.p-works-single-swiper .swiper-slide > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 前へ <
+.p-works-single-swiper .swiper-button-prev{
+  width: g.rem(30);
+  height: g.rem(30);
+  border-radius: g.rem(15);
+  background-color: g.$bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // サファリでフォーカス時に青のラインが表示されるため指定
+  outline-style: none;
+  // デフォルトの位置を上書き
+  top: 52.5%;
+  left: g.rem(8);
+
+  @include g.mq('tab'){
+    width: g.rem(50);
+    height: g.rem(50);
+    border-radius: g.rem(25);
+    // デフォルトの位置を上書き
+    top: 49.3%;
+  }
+}
+
+.p-works-single-swiper .swiper-button-prev::before{
+  content: '';
+  display: block;
+  width: g.rem(12);
+  height: g.rem(12);
+  border-left: g.rem(2) solid g.$swiperArrow;
+  border-bottom: g.rem(2) solid g.$swiperArrow;
+  transform: translateX(g.rem(3)) rotate(45deg);
+
+  @include g.mq('tab'){
+    width: g.rem(20);
+    height: g.rem(20);
+    border-left: g.rem(3) solid g.$swiperArrow;
+    border-bottom: g.rem(3) solid g.$swiperArrow;
+  }
+}
+
+//
+.p-works-single-swiper .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+  display: none;
+}
+
+// 次へ >
+.p-works-single-swiper .swiper-button-next{
+  width: g.rem(30);
+  height: g.rem(30);
+  border-radius: g.rem(15);
+  background-color: g.$bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // サファリでフォーカス時に青のラインが表示されるため指定
+  outline-style: none;
+  // デフォルトの位置を上書き
+  top: 52.5%;
+  right: g.rem(8);
+
+  @include g.mq('tab'){
+    width: g.rem(50);
+    height: g.rem(50);
+    border-radius: g.rem(25);
+    // デフォルトの位置を上書き
+    top: 49.3%;
+  }
+}
+
+.p-works-single-swiper .swiper-button-next::before{
+  content: '';
+  display: block;
+  width: g.rem(12);
+  height: g.rem(12);
+  border-right: g.rem(2) solid g.$swiperArrow;
+  border-bottom: g.rem(2) solid g.$swiperArrow;
+  transform: translateX(g.rem(-3)) rotate(-45deg);
+
+  @include g.mq('tab'){
+    width: g.rem(20);
+    height: g.rem(20);
+    border-right: g.rem(3) solid g.$swiperArrow;
+    border-bottom: g.rem(3) solid g.$swiperArrow;
+  }
+}
+
+.p-works-single-swiper .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  display: none;
+}
+
+
+/***************************************************************
+
+.p-works-single-thumbnail　制作実績詳細 サムネイル
+
+***************************************************************/
+.p-works-single-thumbnail{
+  margin-top: g.rem(32);
+
+  @include g.mq('tab'){
+    margin-top: g.rem(39);
+  }
+}
+
+.p-works-single-thumbnail .swiper-slide{
+  overflow: hidden;
+  position: relative;
+}
+
+.p-works-single-thumbnail .swiper-slide::before{
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.p-works-single-thumbnail .swiper-slide > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

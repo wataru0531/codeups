@@ -1,0 +1,16 @@
+/***************************************************************
+
+.l-contact-sub
+
+***************************************************************/
+@use '../global/' as g;
+
+.l-contact-sub{
+  margin-top: g.rem(74);
+  margin-bottom: g.rem(120);
+
+  @include g.mq('tab'){
+    margin-top: g.rem(115);
+    margin-bottom: g.rem(150);
+  }
+}

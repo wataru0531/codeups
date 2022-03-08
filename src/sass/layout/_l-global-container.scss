@@ -1,0 +1,12 @@
+/***************************************************************
+
+.l-global-container
+
+***************************************************************/
+@use '../global/' as g;
+
+.l-global-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

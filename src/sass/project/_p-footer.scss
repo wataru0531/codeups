@@ -1,0 +1,71 @@
+/***************************************************************
+
+.p-footer
+
+***************************************************************/
+@use '../global' as g;
+
+.p-footer{
+  padding-top: g.rem(48);
+  padding-bottom: g.rem(59);
+
+  @include g.mq('tab'){
+    padding-top: g.rem(32);
+    padding-bottom: g.rem(30);
+  }
+}
+
+.p-footer__inner{
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: g.rem(20);
+  padding-left: g.rem(20);
+
+  @include g.mq('tab'){
+    padding-right: g.rem(32);
+    padding-left: g.rem(32);
+    width: 100%;
+    max-width: g.rem(1344);
+  }
+}
+
+.p-footer__box{
+  @include g.mq('tab'){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.p-footer__logo > span,
+.p-footer__logo > a{
+  padding-top: g.rem(4);
+  padding-bottom: g.rem(4);
+  display: block;
+}
+
+.p-footer__logo > span > img,
+.p-footer__logo > a > img{
+  margin-right: auto;
+  margin-left: auto;
+  width: g.rem(70);
+
+  @include g.mq('tab'){
+    width: g.rem(72);
+  }
+}
+
+.p-footer__copyright{
+  margin-top: g.rem(28);
+  font-size: g.rem(13);
+  font-weight: normal;
+  letter-spacing: 0.10909091em;
+  color: g.$white;
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(68);
+    font-size: g.rem(18);
+    letter-spacing: 0.068em;
+  }
+}

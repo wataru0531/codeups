@@ -1,0 +1,58 @@
+/***************************************************************
+
+.p-single-blog
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-single-blog__header{
+  padding-right: g.rem(20);
+  padding-left: g.rem(20);
+  
+  @include g.mq('tab'){
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: g.rem(25);
+    padding-left: g.rem(25);
+    width: 100%;
+    max-width: g.rem(850);
+  }
+}
+
+.p-single-blog__title{
+  font-size: g.rem(20);
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  color: g.$white;
+}
+
+.p-single-blog__box{
+  margin-top: g.rem(16);
+  display: flex;
+}
+
+.p-single-blog__time{
+  margin-right: g.rem(24);
+  padding-top: g.rem(10);
+  display: block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  color: g.$white;
+}
+
+.p-single-blog__category{
+  padding-top: g.rem(11);
+  padding-bottom: g.rem(11);
+  padding-right: g.rem(21);
+  padding-left: g.rem(21);
+  display: inline-block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  color: g.$white;
+  border: g.rem(1) solid g.$white;
+}

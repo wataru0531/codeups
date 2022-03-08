@@ -1,0 +1,17 @@
+/***************************************************************
+
+.p-taxonomy-list
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-taxonomy-list__item{
+  margin-right: g.rem(15);
+  margin-bottom: g.rem(13);
+
+  @include g.mq('tab'){
+    margin-right: g.rem(27);
+    margin-bottom: g.rem(18);
+  }
+}
+

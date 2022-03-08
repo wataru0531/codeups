@@ -1,0 +1,81 @@
+/***************************************************************
+
+.p-header
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-header{
+  width: 100%;
+  height: g.rem(50);
+  background-color: rgba(17, 17, 17, .5);
+  transition: background-color .3s;
+}
+
+.p-header.is-deep{
+  background-color: rgba(17, 17, 17, 1);
+}
+
+.p-header__inner{
+  padding-right: g.rem(21);
+  padding-left: g.rem(21);
+  width: 100%;
+  height: inherit;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include g.mq('tab'){
+    padding-right: 0;
+    padding-left: g.rem(32);
+  }
+}
+
+.p-header__logo{
+  height: inherit;
+  position: relative;
+  z-index: 500;
+}
+
+.p-header__logo span,
+.p-header__logo > a{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-header__logo > span > img,
+.p-header__logo > a > img{
+  width: g.rem(70);
+
+  @include g.mq('tab'){
+    width: g.rem(97);
+  }
+}
+
+.p-header__global-nav{
+  display: none;
+
+  @include g.mq('tab'){
+    display: block;
+  }
+}
+
+.p-header__hamburger-btn{
+  position: relative;
+  z-index: 500;
+
+  @include g.mq('tab'){
+    display: none;
+  }
+}
+
+.p-header__drawer{
+  // display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+}

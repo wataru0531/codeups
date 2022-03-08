@@ -1,0 +1,47 @@
+/***************************************************************
+
+.p-cards-list-03  3列になるカードリスト...並びや余白を指定。
+
+***************************************************************/
+@use 'sass:math';
+@use '../global' as g;
+
+.p-cards-list-03{
+  @include g.mq('tab'){
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.p-cards-list-03__card{
+  @include g.mq('tab'){
+    width: 100%;
+    max-width: calc(33.3333% - math.div(g.rem(25) * 2, 3));
+  }
+}
+
+.p-cards-list-03__card:not(:first-child){
+  margin-top: g.rem(24);
+
+  @include g.mq('tab'){
+    margin-top: 0;
+  }
+}
+
+.p-cards-list-03__card + .p-cards-list-03__card{
+  @include g.mq('tab'){
+    margin-left: g.rem(25);
+  }
+}
+
+.p-cards-list-03__card:nth-child(3n + 1){
+  @include g.mq('tab'){
+    margin-left: 0;
+  }
+}
+
+.p-cards-list-03__card:nth-child(n + 4){ // 4個目以上
+  @include g.mq('tab'){
+    margin-top: g.rem(48);
+  }
+}

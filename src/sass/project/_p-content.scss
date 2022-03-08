@@ -1,0 +1,61 @@
+/***************************************************************
+
+.p-content
+
+***************************************************************/
+@use '../global/' as g;
+
+// 黄色ライン
+.p-content__line-top{
+  width: 100vw;
+  height: g.rem(1);
+  background-color: g.$lineYellow;
+  transform-origin: left bottom;
+  transform: skewY(61.1deg);
+
+  position: relative;
+  top: g.rem(7);
+  left: 0;
+  z-index: -100;
+
+  @include g.mq('tab'){
+    top: g.rem(-90);
+    transform: skewY(45deg);
+  }
+}
+
+.p-content__subtitle{
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(-1);
+    text-align-last: left;
+  }
+}
+
+.p-content__title{
+  margin-top: g.rem(-7);
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(-90);
+  }
+}
+
+.p-content__items{
+  margin-top: g.rem(52);
+  display: flex;
+  flex-wrap: wrap;
+  
+  @include g.mq('tab'){
+    margin-top: g.rem(48);
+  }
+}
+
+.p-content__item{
+  width: 50%;
+
+  @include g.mq('tab'){
+    width: 25%;
+  }
+}

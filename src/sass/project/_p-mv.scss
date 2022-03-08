@@ -1,0 +1,74 @@
+/***************************************************************
+
+.p-mv ※ Swiperの上書きはextenalフォルダ。
+
+***************************************************************/
+@use '../global' as g;
+
+.p-mv{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.p-mv::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, .2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  // transform: translate(-50%, -50%);
+}
+
+.p-mv__titles{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 400;
+
+  @include g.mq('tab'){
+    top: 49.7%;
+  }
+}
+
+.p-mv__title{
+  font-size: g.rem(28);
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 0.025em;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    font-size: g.rem(50);
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+}
+
+.p-mv__subtitle{
+  margin-top: g.rem(16);
+  font-size: g.rem(20);
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 0.01785714em;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(9);
+    font-size: g.rem(25);
+    // line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+}
+
+.p-mv__slider{
+  width: 100%;
+  height: inherit;
+}

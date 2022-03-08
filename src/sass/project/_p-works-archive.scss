@@ -1,0 +1,18 @@
+/***************************************************************
+
+.p-works-archive
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-works-archive__inner{
+  @include g.mq('tab'){
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: g.rem(25);
+    padding-left: g.rem(25);
+    width: 100%;
+    max-width: g.rem(1150);
+  }
+}
+

@@ -1,0 +1,12 @@
+/***************************************************************
+
+.p-pagination
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-pagination__inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

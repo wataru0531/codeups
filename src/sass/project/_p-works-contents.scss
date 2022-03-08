@@ -1,0 +1,74 @@
+/***************************************************************
+
+.p-works-contents
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-works-contents{
+  padding-top: g.rem(24);
+  padding-bottom: g.rem(22);
+  padding-right: g.rem(20);
+  padding-left: g.rem(20);
+  background-color: g.$bgSection;
+
+  @include g.mq('tab'){
+    padding-top: 0;
+    padding-bottom: 0;
+    // padding-bottom: g.rem(10);
+
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    max-width: g.rem(510);
+    font-size: g.rem(25);
+    letter-spacing: 0.02em;
+    background-color: transparent;
+    text-align: left;
+  }
+  
+  @include g.mq('pc'){
+    padding-top: g.rem(29);
+    // padding-bottom: g.rem(30);
+  }
+}
+
+.p-works-contents__title{
+  font-size: g.rem(20);
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  color: g.$white;
+  text-align: center;
+
+  @include g.mq('tab'){
+    font-size: g.rem(25);
+    letter-spacing: 0.02em;
+    text-align: left;
+  }
+}
+
+.p-works-contents__description{
+  margin-top: g.rem(22);
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1.45;
+  letter-spacing: 0.125em;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(36);
+    line-height: 2.1875;
+    letter-spacing: 0.03125em;
+  }
+}
+
+.p-works-contents__btn{
+  margin-top: g.rem(27);
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(50);
+    text-align: left;
+  }
+}

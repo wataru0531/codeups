@@ -1,0 +1,36 @@
+/***************************************************************
+
+.p-relation
+
+***************************************************************/
+@use '../global/' as g;
+
+
+.p-relation__header{
+  padding-top: g.rem(12);
+  padding-bottom: g.rem(12);
+  border: g.rem(1) solid g.$white;
+
+  @include g.mq('tab'){
+    background-color: g.$bgRelation;
+  }
+}
+
+.p-relation__title{
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  color: g.$white;
+  text-align: center;
+
+  
+}
+
+.p-relation__cards{
+  margin-top: g.rem(32);
+
+  @include g.mq('tab'){
+    margin-top: g.rem(78);
+  }
+}

@@ -1,0 +1,70 @@
+/***************************************************************
+
+.p-cards-list-04
+
+***************************************************************/
+@use '../global/' as g;
+@use "sass:math";
+
+.p-cards-list-04{
+  @include g.mq('tab'){
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.p-cards-list-04__card{
+  @include g.mq('tab'){
+    width: 100%;
+    max-width: calc(50% - math.div(g.rem(48), 2));
+  }
+
+  @include g.mq('pc'){
+    max-width: calc(25% - math.div(g.rem(32) * 3, 4));
+  }
+}
+
+// sp
+.p-cards-list-04__card:not(:first-child){
+  margin-top: g.rem(24);
+
+  @include g.mq('tab'){
+    margin-top: 0;
+  }
+}
+
+// tab
+.p-cards-list-04__card:nth-child(2n){
+  @include g.mq('tab'){
+    margin-left: g.rem(48);
+  }
+
+  @include g.mq('pc'){
+    margin-left: 0;
+  }
+}
+
+.p-cards-list-04__card:nth-child(n+3){
+  @include g.mq('tab'){
+    margin-top: g.rem(48);
+  }
+
+  @include g.mq('pc'){
+    margin-top: 0;
+  }
+}
+
+// pc
+.p-cards-list-04__card:not(:first-child){
+  @include g.mq('pc'){
+    margin-left: g.rem(32);
+  }
+}
+
+.p-cards-list-04__card:nth-child(n+5){
+  @include g.mq('pc'){
+    margin-top: g.rem(32);
+    margin-left: 0;
+  }
+}
+

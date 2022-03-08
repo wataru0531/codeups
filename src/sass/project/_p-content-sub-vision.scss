@@ -1,0 +1,43 @@
+/***************************************************************
+
+.p-content-sub-vision
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-content-sub-vision__title{
+  font-size: g.rem(20);
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  color: g.$white;
+  text-align: center;
+
+  @include g.mq('tab'){
+    font-size: g.rem(25);
+    letter-spacing: 0.08em;
+  }
+}
+
+.p-content-sub-vision__description{
+  margin-top: g.rem(21);
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1.45;
+  letter-spacing: 0.125em;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(21);
+    line-height: 2.1875;
+    text-align: center;
+  }
+}
+
+.p-content-sub-vision__description > br{
+  display: none;
+
+  @include g.mq('tab'){
+    display: block;
+  }
+}
+

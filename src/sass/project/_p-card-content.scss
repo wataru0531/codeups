@@ -1,0 +1,99 @@
+/***************************************************************
+
+.p-card-content
+
+***************************************************************/
+@use '../global/' as g;
+
+
+.p-card-content__img{
+  overflow: hidden;
+  position: relative;
+
+  @include g.mq('tab'){
+    margin-right: g.rem(30);
+    width: 100%;
+    max-width: g.rem(550);
+  }
+}
+
+.p-card-content:nth-child(2) .p-card-content__img{
+  @include g.mq('tab'){
+    margin-right: 0;
+  }
+}
+
+.p-card-content__img::before{
+  content: '';
+  display: block;
+  padding-top: 69.7%;
+
+  @include g.mq('tab'){
+    padding-top: 66.727272%;
+  }
+}
+
+.p-card-content__img > picture > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-card-content__body{
+  padding-top: g.rem(22);
+  padding-bottom: g.rem(5);
+  padding-right: g.rem(20);
+  padding-left: g.rem(20);
+
+  @include g.mq('tab'){
+    padding-top: g.rem(14);
+    padding-bottom: g.rem(14);
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    max-width: g.rem(510);
+  }
+}
+
+.p-card-content:nth-child(2) .p-card-content__body{
+  @include g.mq('tab'){
+    margin-right: g.rem(39);
+  }
+}
+
+.p-card-content__title{
+  font-size: g.rem(20);
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  color: g.$white;
+  text-align: center;
+
+  @include g.mq('tab'){
+    font-size: g.rem(25);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    text-align: left;
+  }
+}
+
+.p-card-content__description{
+  margin-top: g.rem(20);
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1.6;
+  line-height: 1.45;
+  letter-spacing: 0.125em;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(30);
+    line-height: 2.1875;
+    letter-spacing: 0.03125em;
+  }
+}

@@ -1,0 +1,60 @@
+/***************************************************************
+
+.p-works
+
+***************************************************************/
+@use '../global/' as g;
+
+
+.p-works__subtitle{
+  text-align: center;
+
+  @include g.mq('tab'){
+    text-align: right;
+  }
+}
+
+.p-works__title{
+  margin-top: g.rem(-7);
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(-80);
+  }
+}
+
+.p-works__box{
+  margin-top: g.rem(52);
+
+  @include g.mq('tab'){
+    margin-top: g.rem(37);
+    padding-top: g.rem(82);
+    padding-bottom: g.rem(81);
+    background: linear-gradient(90deg, transparent 0%, transparent 30%, g.$bgSection 30%, g.$bgSection 100%);
+  }
+}
+
+.p-works__slider-contents{
+  @include g.mq('tab'){
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: g.rem(25);
+    padding-left: g.rem(25);
+    width: 100%;
+    // max-width: g.rem(1150);
+    max-width: g.rem(1146);
+    
+    display: flex;
+    // align-items: center;
+  }
+}
+
+.p-works__slider{
+  position: relative;
+
+  @include g.mq('tab'){
+    margin-right: g.rem(31);
+    width: 100%;
+    max-width: g.rem(556);
+  }
+}

@@ -1,0 +1,89 @@
+/***************************************************************
+
+.p-single-pagination   投稿記事ページのページネーション
+
+***************************************************************/
+@use '../global' as g;
+
+.p-single-pagination__inner{
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: g.rem(309);
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+// PREV
+.p-single-pagination__previous a{
+  padding-top: g.rem(4);
+  padding-bottom: g.rem(4);
+  padding-right: g.rem(11);
+  padding-left: g.rem(11);
+  display: block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  color: g.$white;
+  border: g.rem(1) solid g.$white;
+  transition: all .3s;
+}
+.p-single-pagination__previous a:hover{
+  @include g.mq('tab'){
+    color: g.$text;
+    background-color: g.$white;
+  }
+}
+
+// 一覧
+.p-single-pagination__archive{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.p-single-pagination__archive a{
+  padding-top: g.rem(4);
+  padding-bottom: g.rem(4);
+  padding-right: g.rem(16);
+  padding-left: g.rem(16);
+  display: block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  color: g.$white;
+  border: g.rem(1) solid g.$white;
+  transition: all .3s;
+}
+.p-single-pagination__archive a:hover{
+  @include g.mq('tab'){
+    color: g.$text;
+    background-color: g.$white;
+  }
+}
+
+// NEXT
+.p-single-pagination__next a{
+  padding-top: g.rem(4);
+  padding-bottom: g.rem(4);
+  padding-right: g.rem(11);
+  padding-left: g.rem(11);
+  display: block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  color: g.$white;
+  border: g.rem(1) solid g.$white;
+  transition: all .3s;
+}
+.p-single-pagination__next a:hover{
+  @include g.mq('tab'){
+    color: g.$text;
+    background-color: g.$white;
+  }
+}

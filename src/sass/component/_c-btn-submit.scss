@@ -1,0 +1,36 @@
+/***************************************************************
+
+.c-btn-submit
+
+***************************************************************/
+@use '../global/' as g;
+
+.c-btn-submit{
+  padding-top: g.rem(13);
+  padding-bottom: g.rem(13);
+  padding-right: g.rem(15);
+  padding-left: g.rem(15);
+  width: 100%;
+  max-width: g.rem(360);
+  display: inline-block;
+  font-size: g.rem(20);
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  color: g.$text;
+  background-color: g.$white;
+  text-align: center;
+  transition: opacity .3s;
+
+  @include g.mq('tab'){
+    padding-top: g.rem(18);
+    padding-bottom: g.rem(18);
+    padding-right: g.rem(20);
+    padding-left: g.rem(20);
+    letter-spacing: 0.125em;
+  }
+}
+
+.c-btn-submit:hover{
+  opacity: .7;
+}

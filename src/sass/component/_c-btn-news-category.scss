@@ -1,0 +1,26 @@
+/***************************************************************
+
+.c-btn-news-category
+
+***************************************************************/
+@use '../global/' as g;
+
+.c-btn-news-category{
+  padding-top: g.rem(6);
+  padding-bottom: g.rem(6);
+  padding-right: g.rem(21);
+  padding-left: g.rem(21);
+  display: block;
+  font-size: g.rem(14);
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: g.$white;
+  border: g.rem(1) solid g.$white;
+
+  @include g.mq('tab'){
+    padding-right: g.rem(19);
+    padding-left: g.rem(19);
+    font-weight: 500;
+  }
+}

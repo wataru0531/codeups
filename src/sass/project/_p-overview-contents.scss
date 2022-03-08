@@ -1,0 +1,63 @@
+/***************************************************************
+
+.p-overview-contents
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-overview-contents{
+  padding-top: g.rem(24);
+  padding-bottom: g.rem(21);
+  padding-right: g.rem(20);
+  padding-left: g.rem(20);
+  background-color: g.$bgSection;
+
+  @include g.mq('tab'){
+    padding-top: g.rem(27);
+    padding-bottom: g.rem(38);
+    padding-right: 0;
+    padding-left: 0;
+    background-color: transparent;
+  }
+}
+
+.p-overview-contents__title{
+  font-size: g.rem(20);
+  font-weight: normal;
+  // line-height: ;
+  letter-spacing: 0.1em;
+  color: g.$white;
+  text-align: center;
+
+  @include g.mq('tab'){
+    font-size: g.rem(25);
+    letter-spacing: 0.02em;
+    text-align: left;
+  }
+}
+
+.p-overview-contents__description{
+  margin-top: g.rem(20);
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1.45;
+  letter-spacing: 0.125em;
+  color: g.$white;
+  text-align: left;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(36);
+    line-height: 2.1875;
+    letter-spacing: 0.03125em;
+  }
+}
+
+.p-overview-contents__btn{
+  margin-top: g.rem(26);
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(49);
+    text-align: left;
+  }
+}

@@ -1,0 +1,29 @@
+/***************************************************************
+
+.c-btn-taxonomy
+
+***************************************************************/
+@use '../global/' as g;
+
+.c-btn-taxonomy{
+  padding-top: g.rem(5);
+  padding-bottom: g.rem(5);
+  padding-right: g.rem(8);
+  padding-left: g.rem(8);
+  display: inline-block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.125em;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    padding-right: g.rem(9);
+    padding-left: g.rem(9);
+  }
+}
+
+.c-btn-taxonomy.is-current{
+  color: g.$text;
+  background-color: g.$white;
+}

@@ -1,0 +1,31 @@
+/***************************************************************
+
+.c-section-title
+
+***************************************************************/
+@use '../global' as g;
+
+.c-section-title{
+  font-size: g.rem(20);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    font-size: g.rem(30);
+    line-height: 1.16;
+    letter-spacing: 0.016666em;
+  }
+}
+
+.c-section-title--contact{
+  @extend .c-section-title;
+
+  font-size: g.rem(25);
+  letter-spacing: 0.08em;
+
+  @include g.mq('tab'){
+    letter-spacing: 0.066666em;
+  }
+}

@@ -1,0 +1,302 @@
+/***************************************************************
+
+フォームリセット
+※ input[type="text"]などと指定した場合、、クラス指定よりも優先される。
+
+***************************************************************/
+@use '../global/' as g;
+
+label{
+  display: block;
+}
+
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: none;
+  border: none;
+  // border: 1px solid #333;
+  border-radius: 0;
+  font-family: inherit;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"],
+input[type="button"],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+// input[]とした場合には詳細度が高まってしまい、ここのreset.cssを上書きできなくなる。
+/************************************************************************
+テキスト
+************************************************************************/
+// input[type="text"]{
+//   padding-top: g.rem(6);
+//   padding-bottom: g.rem(6);
+//   padding-right: g.rem(6);
+//   padding-left: g.rem(6);
+//   width: 100%;
+//   font-family: inherit;
+//   font-size: g.rem(16);
+//   font-weight: normal;
+//   line-height: 1;
+//   letter-spacing: normal;
+//   color: inherit;
+// 	background-color: transparent;
+// 	background-image: none;
+// 	border: g.rem(1) solid rgba(0, 0, 0, 0.16);
+// 	border-radius: 0;
+//   appearance: none;
+// }
+
+/************************************************************************
+  メールアドレス
+************************************************************************/
+// input[type="email"]{
+//   padding-top: g.rem(6);
+//   padding-bottom: g.rem(6);
+//   padding-right: g.rem(6);
+//   padding-left: g.rem(6);
+//   width: 100%;
+//   font-family: inherit;
+//   font-size: g.rem(16);
+//   font-weight: normal;
+//   line-height: 1;
+//   letter-spacing: normal;
+//   color: inherit;
+// 	background-color: transparent;
+// 	background-image: none;
+// 	border: g.rem(1) solid rgba(0, 0, 0, 0.16);
+// 	border-radius: 0;
+//   appearance: none;
+// }
+
+/************************************************************************
+  電話番号
+************************************************************************/
+// input[type="tel"]{
+//   padding-top: g.rem(6);
+//   padding-bottom: g.rem(6);
+//   padding-right: g.rem(6);
+//   padding-left: g.rem(6);
+//   width: 100%;
+//   font-family: inherit;
+//   font-size: g.rem(16);
+//   font-weight: normal;
+//   line-height: 1;
+//   letter-spacing: normal;
+//   color: inherit;
+// 	background-color: transparent;
+// 	background-image: none;
+// 	border: g.rem(1) solid rgba(0, 0, 0, 0.16);
+// 	border-radius: 0;
+//   appearance: none;
+// }
+
+/************************************************************************
+  パスワード
+************************************************************************/
+// input[type="password"]{
+//   padding-top: g.rem(6);
+//   padding-bottom: g.rem(6);
+//   padding-right: g.rem(6);
+//   padding-left: g.rem(6);
+//   width: 100%;
+//   font-family: inherit;
+//   font-size: g.rem(16);
+//   font-weight: normal;
+//   line-height: 1;
+//   letter-spacing: normal;
+//   color: inherit;
+// 	background-color: transparent;
+// 	background-image: none;
+// 	border: g.rem(1) solid rgba(0, 0, 0, 0.16);
+// 	border-radius: 0;
+//   appearance: none;
+// }
+
+/************************************************************************
+  テキストエリア
+************************************************************************/
+// textarea{
+//   padding-top: g.rem(6);
+//   padding-bottom: g.rem(6);
+//   padding-right: g.rem(6);
+//   padding-left: g.rem(6);
+//   width: 100%;
+//   font-family: inherit;
+//   font-size: g.rem(16);
+//   font-weight: normal;
+//   line-height: 1;
+//   letter-spacing: normal;
+//   color: inherit;
+// 	background-color: transparent;
+// 	background-image: none;
+// 	border: g.rem(1) solid rgba(0, 0, 0, 0.16);
+// 	border-radius: 0;
+//   appearance: none;
+// }
+
+/************************************************************************
+  チェックボックス
+************************************************************************/
+// input[type="checkbox"]{
+//   display: none;
+// }
+
+// input[type="checkbox"] + span{
+//   padding-left: g.rem(25);
+//   display: inline-block;
+//   cursor: pointer;
+//   position: relative;
+// }
+
+// input[type="checkbox"] + span::before{ 
+//   content: '';
+//   display: block;
+//   width: g.rem(18);
+//   height: g.rem(18);
+//   background-color: #fff;
+//   // border: g.rem(1) solid rgba(0, 0, 0, 0.16);
+//   border-radius: g.rem(2);
+//   position: absolute;
+//   top: 50%;
+//   left: 0;
+//   transform: translateY(-50%);
+// }
+
+// input[type="checkbox"] + span::after{
+//   margin-top: g.rem(-2);
+//   content: '';
+//   display: block;
+//   width: g.rem(12);
+//   height: g.rem(8);
+//   border-bottom: g.rem(2) solid rgba(0, 0, 0, 0.32);
+//   border-left: g.rem(2) solid rgba(0, 0, 0, 0.32);
+//   position: absolute;
+//   top: 50%;
+//   left: g.rem(3);
+//   transform: translateY(-50%) rotate(-45deg);
+
+//   opacity: 0;
+//   transition: all .3s;
+// }
+
+// input[type="checkbox"]:checked + span::after{
+//   opacity: 1;
+// }
+
+/************************************************************************
+  ラジオボタン
+************************************************************************/
+// input[type="radio"] {
+//   display: none;
+// }
+
+// input[type="radio"] + span{
+//   padding-left: g.rem(25);
+//   display: inline-block;
+//   cursor: pointer;
+//   position: relative;
+// }
+
+// input[type="radio"] + span::before{
+//   content: '';
+//   display: block;
+//   width: g.rem(18);
+//   height: g.rem(18);
+//   background-color: #fff;
+//   // border: g.rem(1) solid rgba(0, 0, 0, 0.16);
+//   border-radius: 50%;
+//   position: absolute;
+//   top: 50%;
+//   left: 0;
+//   transform: translateY(-50%);
+// }
+
+// input[type="radio"] + span::after{
+//   content: '';
+//   display: block;
+//   padding-top: g.rem(4);
+//   padding-bottom: g.rem(4);
+//   padding-right: g.rem(4);
+//   padding-left: g.rem(4);
+//   width: g.rem(12);
+//   height: g.rem(12);
+//   background-color: rgba(0, 0, 0, 0.32);
+//   border: g.rem(1) solid transparent;
+//   border-radius: 50%;
+//   position: absolute;
+//   top: 50%;
+//   left: g.rem(3);
+//   transform: translateY(-50%);
+
+//   opacity: 0;
+//   transition: all .3s;
+// }
+
+// input[type="radio"]:checked + span::after{
+// 	opacity: 1;
+// }
+
+/************************************************************************
+  セレクトボックス(ドロップダウン)
+************************************************************************/
+// select{
+//   padding-top: g.rem(8);
+//   padding-bottom: g.rem(8);
+//   padding-right: g.rem(8);
+//   padding-left: g.rem(8);
+//   display: block;
+//   width: 100%;
+//   font-family: inherit;
+//   font-size: g.rem(16);
+//   font-weight: normal;
+//   line-height: 1;
+//   letter-spacing: normal;
+//   color: inherit;
+// 	background-color: transparent;
+// 	border: g.rem(1) solid rgba(0, 0, 0, 0.16);
+// 	border-radius: 0;
+//   appearance: none;
+// }
+
+// .select-box{ // 疑似要素用のdiv。selectには疑似要素はあてれない
+//   position: relative;
+// }
+
+// .select-box::before{
+//   margin-top: g.rem(-2);
+//   content: '';
+//   display: block;
+//   width: g.rem(10);
+//   height: g.rem(10);
+//   border-bottom: g.rem(2) solid rgba(0, 0, 0, 0.16);
+//   border-left: g.rem(2) solid rgba(0, 0, 0, 0.16);
+//   cursor: pointer;
+//   pointer-events: none;
+//   position: absolute;
+//   top: 50%;
+//   right: g.rem(12);
+//   z-index: 100;
+//   transform: translateY(-50%) rotate(-45deg);
+// }
+
+
+// select::-ms-expand { // スタイルを無効 IE対策
+//   display: none;
+// }

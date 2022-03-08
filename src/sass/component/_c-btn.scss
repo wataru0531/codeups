@@ -1,0 +1,69 @@
+/***************************************************************
+
+.c-btn
+
+***************************************************************/
+@use '../global' as g;
+
+.c-btn{
+  padding-top: g.rem(14);
+  padding-bottom: g.rem(14);
+  padding-right: g.rem(14);
+  padding-left: g.rem(14);
+  display: inline-block;
+  width: 100%;
+  max-width: g.rem(360);
+
+  font-size: g.rem(20);
+
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: g.$white;
+  background-color: g.$bgBtn;
+  border: g.rem(1) solid g.$white;
+  text-align: center;
+  position: relative;
+  transition: all .3s;
+
+  @include g.mq('tab'){
+    padding-top: g.rem(20);
+    padding-bottom: g.rem(20);
+    padding-right: g.rem(20);
+    padding-left: g.rem(20);
+
+    font-size: g.rem(16);
+
+    letter-spacing: 0.125em;
+  }
+}
+
+.c-btn:hover{
+  @include g.mq('tab'){
+    color: g.$text;
+  }
+}
+
+.c-btn::before{
+  @include g.mq('tab'){
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: g.$white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform .3s;
+  }
+}
+
+.c-btn:hover::before{
+  @include g.mq('tab'){
+    transform-origin: left;
+    transform: scale(1, 1);
+  }
+}

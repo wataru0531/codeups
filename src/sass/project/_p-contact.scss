@@ -1,0 +1,58 @@
+/***************************************************************
+
+.p-contact
+
+***************************************************************/
+@use '../global' as g;
+
+.p-contact{
+  padding-top: g.rem(36);
+  padding-bottom: g.rem(64);
+  background-color: g.$bgSection;
+
+  @include g.mq('tab'){
+    padding-top: g.rem(80);
+    padding-bottom: g.rem(149);
+  }
+}
+
+.p-contact-subtitle{
+  text-align: center;
+
+  @include g.mq('tab'){
+    text-align: left;
+  }
+}
+
+.p-contact-title{
+  margin-top: g.rem(-16);
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(-41);
+  }
+}
+
+.p-contact__description{
+  margin-top: g.rem(21);
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1.45;
+  letter-spacing: 0.125em;
+  color: g.$white;
+  text-align: left;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(28);
+    text-align: center;
+  }
+}
+
+.p-contact__btn{
+  margin-top: g.rem(48);
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(58);
+  }
+}

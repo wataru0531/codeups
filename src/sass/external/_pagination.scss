@@ -1,0 +1,56 @@
+/***************************************************************
+
+ページネーション上書き current
+
+***************************************************************/
+@use '../global/' as g;
+
+.page-numbers{
+  margin-bottom: g.rem(10);
+  margin-right: g.rem(8);
+  margin-left: g.rem(8);
+  padding-top: g.rem(3);
+  padding-bottom: g.rem(3);
+  padding-right: g.rem(6);
+  padding-left: g.rem(6);
+
+  display: block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.03125em;
+  color: g.$white;
+  border: g.rem(1) solid g.$white;
+  transition: all .3s;
+}
+
+.page-numbers:hover{
+  @include g.mq('tab'){
+    color: g.$text;
+    background-color: g.$white;
+  }
+}
+
+// 前へ prev
+.prev.page-numbers{
+  margin-left: 0;
+  margin-right: g.rem(16);
+  padding-right: g.rem(11);
+  padding-left: g.rem(11);
+  letter-spacing: 0.125em;
+}
+
+// 次へ next
+.next.page-numbers{
+  margin-left: g.rem(16);
+  margin-right: 0;
+  padding-right: g.rem(11);
+  padding-left: g.rem(11);
+  letter-spacing: 0.125em;
+}
+
+// 現在のページ current
+.page-numbers.current{
+  color: g.$text;
+  background-color: g.$white;
+}

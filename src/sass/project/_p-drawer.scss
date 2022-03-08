@@ -1,0 +1,69 @@
+/***************************************************************
+
+.p-drawer
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-drawer{
+  width: 100%;
+  height: 100vh;
+  background-color: g.$bg;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateX(100%);
+  transition: all .3s;
+}
+
+.p-drawer.is-slide{
+  transform: translateX(0);
+}
+
+.p-drawer__scroll{
+  padding-top: g.rem(51);
+  padding-bottom: g.rem(50);
+  width: 100%;
+  overflow: scroll;
+}
+
+.p-drawer__items{
+  width: 100%;
+}
+
+.p-drawer__item{
+  width: 100%;
+  text-align: center;
+}
+
+.p-drawer__item a{
+  padding-top: g.rem(16);
+  padding-bottom: g.rem(16);
+  display: block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  color: g.$white;
+  line-height: 1.45;
+  letter-spacing: 0.125em;
+}
+
+.p-drawer.is-slide .p-drawer__item a{
+  animation-name: fadeRight;
+  animation-duration: .4s;
+  animation-delay: .3s;
+  animation-fill-mode: both; // アニメーション開始時は0%指定、アニメーション後は100%指定
+}
+
+@keyframes fadeRight {
+  0%{
+    opacity: 0;
+    transform: translateX(g.rem(25));
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

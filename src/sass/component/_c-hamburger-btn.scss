@@ -1,0 +1,53 @@
+/***************************************************************
+
+.c-hamburger-btn
+
+***************************************************************/
+@use '../global/' as g;
+
+.c-hamburger-btn{
+  padding: 0;
+  width: g.rem(26);
+  height: g.rem(20);
+  cursor: pointer;
+  position: relative;
+  transition: all .3s;
+}
+
+.c-hamburger-btn span{
+  display: inline-block;
+  width: 100%;
+  height: g.rem(2.5);
+  background-color: g.$white;
+  border-radius: g.rem(1);
+  position: absolute;
+  transition: all .3s;
+} 
+
+.c-hamburger-btn span:nth-child(1){
+  top: 0;
+  left: 0;
+}
+.c-hamburger-btn span:nth-child(2){
+  top: g.rem(9);
+  left: 0;
+}
+.c-hamburger-btn span:nth-child(3){
+  bottom: 0;
+  left: 0;
+}
+
+
+.c-hamburger-btn.is-open{
+  transform: rotate(-180deg);
+}
+
+.c-hamburger-btn.is-open span:nth-child(1){
+  transform: translateY(g.rem(8.9)) rotate(-135deg);
+}
+.c-hamburger-btn.is-open span:nth-child(2){
+  transform: translateY(0) rotate(-45deg);
+}
+.c-hamburger-btn.is-open span:nth-child(3){
+  opacity: 0;
+}

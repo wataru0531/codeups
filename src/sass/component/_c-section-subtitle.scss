@@ -1,0 +1,21 @@
+/***************************************************************
+
+.c-section-subtitle
+
+***************************************************************/
+@use '../global' as g;
+
+.c-section-subtitle{
+  font-family: g.$font-family-sub;
+  font-size: g.rem(50);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: rgba(249, 248, 113, .27);
+  text-transform: capitalize;
+
+  @include g.mq('tab'){
+    font-size: g.rem(110);
+    letter-spacing: 0.01818182em;
+  }
+}

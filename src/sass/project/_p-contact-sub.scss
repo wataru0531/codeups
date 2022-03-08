@@ -1,0 +1,21 @@
+/***************************************************************
+
+.p-contact-sub
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-contact-sub__inner{
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: g.rem(20);
+  padding-left: g.rem(20);
+
+  @include g.mq('tab'){
+    padding-right: g.rem( 25);
+    padding-left: g.rem(25);
+    width: 100%;
+    max-width: g.rem(904);
+  }
+
+}

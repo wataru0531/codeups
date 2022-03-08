@@ -1,0 +1,53 @@
+/***************************************************************
+
+.p-overview-sub-list
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-overview-sub-list{
+  padding-top: g.rem(19);
+  padding-bottom: g.rem(19);
+  border-bottom: g.rem(1) solid g.$white;
+  display: flex;
+
+  @include g.mq('tab'){
+    padding-top: g.rem(30);
+    padding-bottom: g.rem(30);
+  }
+}
+
+.p-overview-sub-list__title{
+  padding-right: g.rem(10);
+  padding-left: g.rem(5);
+  width: 30%;
+  max-width: g.rem(157);
+  font-size: g.rem(13);
+  font-weight: normal;
+  line-height: 1.61538461538;
+  letter-spacing: normal;
+  color: g.$white;
+
+  @include g.mq('tab'){
+    padding-right: g.rem(10);
+    padding-left: g.rem(2);
+    font-size: g.rem(16);
+    line-height: 1.3125;
+  }
+}
+
+.p-overview-sub-list__content{
+  padding-right: g.rem(5);
+  font-size: g.rem(13);
+  font-weight: normal;
+  line-height: 1.4615384615;
+  letter-spacing: normal;
+  color: g.$white;
+  flex: 1;
+  @include g.mq('tab'){
+    padding-right: 0;
+    font-size: g.rem(16);
+    line-height: 1.5;
+    letter-spacing: 0.0625em;
+  }
+}

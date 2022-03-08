@@ -1,0 +1,60 @@
+/***************************************************************
+
+.p-footer-nav
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-footer-nav__item{
+  @include g.mq('tab'){
+    display: inline-block;
+  }
+}
+
+.p-footer-nav__item > a{
+  padding-top: g.rem(3);
+  padding-bottom: g.rem(3);
+  display: block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1.55;
+  letter-spacing: 0.075em;
+  color: g.$white;
+  text-align: center;
+  position: relative;
+
+  @include g.mq('tab'){
+    padding-right: g.rem(16);
+    padding-left: g.rem(16);
+    letter-spacing: 0.099em;
+  }
+}
+
+.p-footer-nav__item:last-child > a{
+  @include g.mq('tab'){
+    padding-right: 0;
+  }
+}
+
+.p-footer-nav__item > a::after{
+  @include g.mq('tab'){
+    content: '';
+    display: block;
+    width: calc(100% - g.rem(16) * 2);
+    height: g.rem(1);
+    background-color: g.$underLine;
+    position: absolute;
+    bottom: 0;
+    left: g.rem(16);
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform .3s;
+  }
+}
+
+.p-footer-nav__item > a:hover::after{
+  @include g.mq('tab'){
+    transform-origin: left;
+    transform: scale(1, 1);
+  }
+}

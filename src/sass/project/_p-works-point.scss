@@ -1,0 +1,49 @@
+/***************************************************************
+
+.p-works-point
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-works-point__title{
+  margin-left: g.rem(25);
+  padding-top: g.rem(13);
+  padding-bottom: g.rem(13);
+  padding-right: g.rem(22);
+  padding-left: g.rem(22);
+  display: inline-block;
+  font-size: g.rem(20);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: g.$white;
+  border: g.rem(1) solid g.$white;
+  border-radius: g.rem(23);
+  background-color: g.$bg;
+
+  @include g.mq('tab'){
+    margin-left: g.rem(38);
+  }
+}
+
+.p-works-point__description{
+  margin-top: g.rem(-25);
+  padding-top: g.rem(56);
+  padding-bottom: g.rem(33);
+  padding-right: g.rem(10);
+  padding-left: g.rem(10);
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 2.1875;
+  letter-spacing: 0.025em;
+  color: g.$white;
+  border: g.rem(1) solid g.$white;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(-25);
+    padding-top: g.rem(44);
+    padding-bottom: g.rem(32);
+    padding-right: g.rem(22);
+    padding-left: g.rem(22);
+  }
+}

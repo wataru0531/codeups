@@ -1,0 +1,18 @@
+/***************************************************************
+
+.l-page-top
+
+***************************************************************/
+@use '../global/' as g;
+
+.l-page-top{
+  position: fixed;
+  bottom: g.rem(42);
+  right: g.rem(21);
+  z-index: 400;
+
+  @include g.mq('tab'){
+    bottom: g.rem(29);
+    right: g.rem(31);
+  }
+}

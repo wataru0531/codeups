@@ -1,0 +1,72 @@
+/***************************************************************
+
+.p-card-works
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-card-works{
+  display: block;
+}
+
+.p-card-works__img{
+  overflow: hidden;
+  position: relative;
+}
+
+.p-card-works__img::before{
+  content: '';
+  display: block;
+  padding-top: 66.4%;
+}
+
+.p-card-works__img > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+}
+
+.p-card-works__category{
+  padding-top: g.rem(11);
+  padding-bottom: g.rem(11);
+  padding-right: g.rem(19);
+  padding-left: g.rem(19);
+  display: inline-block;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.125em;
+  color: g.$white;
+  background-color: g.$black;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.p-card-works__body{
+  padding-top: g.rem(24);
+  padding-bottom: g.rem(24);
+  padding-right: g.rem(24);
+  padding-left: g.rem(24);
+
+  @include g.mq('tab'){
+    padding-top: g.rem(12);
+    padding-bottom: g.rem(12);
+    padding-right: g.rem(12);
+    padding-left: g.rem(12);
+  }
+}
+
+.p-card-works__title{
+  font-size: g.rem(20);
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+  color: g.$white;
+  text-align: center;
+}

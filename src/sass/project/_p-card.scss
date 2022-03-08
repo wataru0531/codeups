@@ -1,0 +1,138 @@
+/***************************************************************
+
+.p-card
+
+***************************************************************/
+@use '../global' as g;
+
+.p-card{
+  display: block;
+
+  @include g.mq('tab'){
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.p-card__img{
+  overflow: hidden;
+  position: relative;
+}
+
+.p-card__img::before{
+  content: '';
+  display: block;
+  padding-top: 66.567164%;
+}
+
+.p-card__img > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-card__body{
+  padding-top: g.rem(5);
+  padding-bottom: g.rem(15);
+  padding-right: g.rem(21);
+  padding-left: g.rem(21);
+  background-color: g.$white;
+  transition: background-color .3s;
+
+  @include g.mq('tab'){
+    padding-top: g.rem(4);
+    padding-right: g.rem(23);
+    padding-left: g.rem(23);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.p-card:hover .p-card__body{
+  @include g.mq('tab'){
+    background-color: g.$bgCard;
+  }
+}
+
+// タイトル
+.p-card__title{
+  font-size: g.rem(18);
+  font-weight: 500;
+  line-height: 1.94444444;
+  letter-spacing: 0.05555556em;
+  color: g.$text;
+  transition: color .3s;
+}
+.p-card:hover .p-card__title{
+  @include g.mq('tab'){
+    color: g.$white;
+  }
+}
+
+// コンテンツ
+.p-card__excerpt{
+  margin-top: g.rem(2);
+  font-size: g.rem(14);
+  font-weight: normal;
+  line-height: 1.85714286;
+  letter-spacing: 0.07142857em;
+  color: g.$text;
+  transition: color .3s;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(4);
+  }
+}
+.p-card:hover .p-card__excerpt{
+  @include g.mq('tab'){
+    color: g.$white;
+  }
+}
+
+.p-card__category-time{
+  margin-top: g.rem(7);
+  display: flex;
+  justify-content: space-between;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(11);
+  }
+}
+
+.p-card__category{
+  margin-right: g.rem(6);
+  padding-top: g.rem(4);
+  padding-bottom: g.rem(4);
+  padding-right: g.rem(4);
+  padding-left: g.rem(4);
+  display: block;
+  font-size: g.rem(14);
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.07142857em;
+  color: g.$black;
+  background-color: g.$bgCategory;
+}
+
+// タイム
+.p-card__time{
+  display: block;
+  font-size: g.rem(14);
+  font-weight: normal;
+  line-height: 1.85714286;
+  letter-spacing: 0.07142857em;
+  color: g.$text;
+  transition: color .3s;
+}
+.p-card:hover .p-card__time{
+  @include g.mq('tab'){
+    color: g.$white;
+  }
+}
+

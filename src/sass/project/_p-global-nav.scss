@@ -1,0 +1,99 @@
+/***************************************************************
+
+.p-global-nav
+
+***************************************************************/
+@use '../global' as g;
+
+.p-global-nav{
+  height: inherit;
+}
+
+.p-global-nav__items{
+  height: inherit;
+}
+
+.p-global-nav__item{
+  display: inline-block;
+  height: inherit;
+}
+
+// 共通のCSS
+.p-global-nav__item a{
+  padding-right: g.rem(13);
+  padding-left: g.rem(13);
+  height: inherit;
+  font-size: g.rem(16);
+  font-weight: normal;
+  line-height: 2.1875;
+  letter-spacing: 0.133em;
+  color: g.$white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+// 黄色のアンダーライン
+.p-global-nav__item:not(:nth-child(6)) a::after{
+  content: '';
+  display: inline-block;
+  width: calc(100% - g.rem(26));
+  height: g.rem(1);
+  background-color: g.$underLine;
+  position: absolute;
+  bottom: g.rem(8);
+  left: g.rem(13);
+
+  transform-origin: right;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+.p-global-nav__item:not(:nth-child(6)) a:hover::after{
+  transform-origin: left;
+  transform: scale(1, 1);
+}
+
+// ブログのリンク ５番目
+.p-global-nav__item:nth-child(5) a{
+  padding-right: g.rem(24);
+}
+.p-global-nav__item:nth-child(5) a::after{
+  width: calc(100% - g.rem(37));
+}
+
+
+// お問い合せボタン　6番目
+.p-global-nav__item:nth-child(6) a{
+  padding-right: g.rem(30);
+  padding-left: g.rem(32);
+  color: g.$text;
+  background-color: g.$white;
+  position: relative;
+}
+
+.p-global-nav__item:nth-child(6):hover a{
+  color: g.$white;
+}
+
+.p-global-nav__item:nth-child(6) a::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: g.$bgBtn;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -500;
+
+  transform-origin: right;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+.p-global-nav__item:nth-child(6):hover a::before{
+  transform-origin: left;
+  transform: scale(1, 1);
+}

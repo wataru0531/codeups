@@ -1,0 +1,53 @@
+/***************************************************************
+
+.p-404
+
+***************************************************************/
+@use '../global/' as g;
+
+
+.p-404__title{
+  font-size: g.rem(40);
+  font-weight: normal;
+  // line-height: ;
+  letter-spacing: 0.05em;
+  color: rgba(255, 234, 46, .3);
+  text-align: center;
+
+  @include g.mq('tab'){
+    font-size: g.rem(60);
+    letter-spacing: 0.033333em;
+  }
+}
+
+.p-404__text{
+  margin-top: g.rem(64);
+  font-size: g.rem(20);
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  color: g.$white;
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(50);
+    font-size: g.rem(30);
+    line-height: 1.166666;
+    letter-spacing: 0.066666em;
+  }
+}
+
+.p-404__text > br{
+  @include g.mq('tab'){
+    display: none;
+  }
+}
+
+.p-404__btn{
+  margin-top: g.rem(79);
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(80);
+  }
+}

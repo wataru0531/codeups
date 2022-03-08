@@ -1,0 +1,86 @@
+/***************************************************************
+
+.p-blog
+
+***************************************************************/
+@use '../global' as g;
+
+// 黄色ライン
+.p-blog__line-under{
+  width: 100vw;
+  width: 100%;
+  height: g.rem(1);
+  background-color: g.$lineYellow;
+  transform-origin: left;
+  // transform: skewY(-75deg);
+  transform: rotate(-70deg);
+
+  position: relative;
+  top: g.rem(24);
+  left: 0;
+  z-index: -100;
+
+  @include g.mq('tab'){
+    // transform: skewY(-45deg);
+    top: g.rem(211);
+  }
+}
+
+.p-blog__subtitle{
+  text-align: center;
+
+  @include g.mq('tab'){
+    text-align: right;
+  }
+}
+
+.p-blog__title{
+  margin-top: g.rem(-5);
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(-72);
+  }
+}
+
+.p-blog__cards{
+  margin-top: g.rem(68);
+
+@include g.mq('tab'){
+  margin-top: g.rem(39);
+}
+}
+
+.p-blog__cards .p-cards-list-03__card:first-child{
+  position: relative;
+}
+
+// １番目のみ「New」
+.p-blog__cards .p-cards-list-03__card:first-child::after{
+  content: 'New';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: g.rem(60);
+  height: g.rem(60);
+  font-size: g.rem( 16);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  color: g.$text;
+  border-radius: 50%;
+  background-color: g.$bgNew;
+  position: absolute;
+  top: g.rem(-16);
+  left: g.rem(-16);
+}
+
+
+.p-blog__btn{
+  margin-top: g.rem(24);
+  text-align: center;
+
+  @include g.mq('tab'){
+    margin-top: g.rem(50);
+  }
+}

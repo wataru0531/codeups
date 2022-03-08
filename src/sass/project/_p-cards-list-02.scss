@@ -1,0 +1,41 @@
+/***************************************************************
+
+.p-cards-list-02
+
+***************************************************************/
+@use '../global/' as g;
+@use "sass:math";
+
+.p-cards-list-02{
+  @include g.mq('tab'){
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.p-cards-list-02__card{
+  @include g.mq('tab'){
+    width: 100%;
+    max-width: calc(50% - math.div(g.rem(48), 2));
+  }
+}
+
+.p-cards-list-02__card:not(:first-child){
+  margin-top: g.rem(24);
+
+  @include g.mq('tab'){
+    margin-top: 0;
+  }
+}
+
+.p-cards-list-02__card:nth-child(2n){
+  @include g.mq('tab'){
+    margin-left: g.rem(48);
+  }
+}
+
+.p-cards-list-02__card:nth-child(n+3){
+  @include g.mq('tab'){
+    margin-top: g.rem(102);
+  }
+}

@@ -1,0 +1,47 @@
+/***************************************************************
+
+.p-page-top
+
+***************************************************************/
+@use '../global/' as g;
+
+.p-page-top{
+  width: g.rem(45);
+  height: g.rem(45);
+  background-color: g.$white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.p-page-top:hover{
+  @include g.mq('tab'){
+    background-color: g.$bgArrow;
+  }
+}
+
+.p-page-top.is-show{
+  opacity: 1;
+  visibility: visible;
+}
+
+.p-page-top__arrow{
+  display: block;
+  width: g.rem(20);
+  height: g.rem(20);
+  border-top: g.rem(2) solid g.$bgArrow;
+  border-right: g.rem(2) solid g.$bgArrow;
+  transform: translateY(g.rem(6)) rotate(-45deg);
+  transition: border-top .3s, border-right .3s;
+}
+
+.p-page-top:hover .p-page-top__arrow{
+  @include g.mq('tab'){
+    border-top: g.rem(2) solid g.$white;
+    border-right: g.rem(2) solid g.$white;
+  }
+  
+}

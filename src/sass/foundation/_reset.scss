@@ -1,0 +1,155 @@
+/***************************************************************
+
+リセットCSS
+
+***************************************************************/
+@use '../global/' as g;
+
+/* リキッドレイアウト対応 */
+html {
+	// 375px~787px
+	font-size: g.vw(375, 16);
+
+	@include g.mq("sp") {
+		font-size: 16px;
+	}
+  
+	// 768px~inner
+	@include g.mq("tab") {
+		font-size: g.vw(g.strip-unit(g.$l-inner), 16); // 16 / 1100 * 100vw
+	}
+
+  // @include g.mq("first") {
+	// 	font-size: g.vw(900, 16);
+	// }
+  // @include g.mq("second") {
+	// 	font-size: g.vw(1000, 16);
+	// }
+  // @include g.mq("third") {
+	// 	font-size: g.vw(1000, 16);
+	// }
+  
+	//inner~max-screen
+	@media (min-width: g.$l-inner) {
+		font-size: 16px;
+	}
+}
+
+/* Set core body defaults */
+body {
+	font-family: g.$font-family-base;
+	font-size: g.$font-size-base;
+	font-weight: g.$font-weight-base;
+	color: g.$text;
+	line-height: g.$lh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-wrap: break-word;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+	text-rendering: optimizeSpeed;
+	position: relative;
+	z-index: -9999;
+  -webkit-tap-highlight-color: transparent; //スマホでaタグやbuttonタグのクリック時に背景色が変わらないように指定。
+  background-color: g.$bg;
+}
+
+/* pcの電話番号発信対応 */
+a[href^="tel:"] {
+  @include g.mq("tab") {
+    pointer-events: none;
+  }
+}
+
+/* ホバー */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+	
+  @include g.mq("tab") {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+// スムーススクロールさせたい時に指定。
+// html {
+//   scroll-behavior: smooth;
+// }
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img{
+	display: block;
+	width: 100%;
+  max-width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
