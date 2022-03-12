@@ -51,19 +51,10 @@
 }
 
 .p-drawer.is-slide .p-drawer__item a{
-  animation-name: fadeRight;
-  animation-duration: .4s;
-  animation-delay: .3s;
-  animation-fill-mode: both; // アニメーション開始時は0%指定、アニメーション後は100%指定
-}
-
-@keyframes fadeRight {
-  0%{
-    opacity: 0;
-    transform: translateX(g.rem(25));
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0);
-  }
+  @include g.animation(
+    $name: fadeRight,
+    $duration: .4s,
+    $delay: .3s,
+    $fill-mode: both,  // アニメーション開始時は0%指定、アニメーション後は100%指定
+  );
 }

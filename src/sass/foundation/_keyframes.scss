@@ -1,0 +1,17 @@
+/***************************************************************
+
+.keyframes
+
+***************************************************************/
+@use '../global/' as g;
+
+@keyframes fadeRight {
+  0%{
+    opacity: 0;
+    transform: translateX(g.rem(25));
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

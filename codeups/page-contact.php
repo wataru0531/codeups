@@ -29,13 +29,11 @@
 <!-- l-contact-sub -->
 <section class="l-contact-sub p-contact-sub">
   <div class="p-contact-sub__inner">
-    <div class="p-contact-sub__form">
-      <!-- l-form -->
-      <div class="l-form p-form">
-        <div class="p-form__inner">
-          <?php echo do_shortcode('[contact-form-7 id="36" title="お問い合わせ"]'); ?>
-        </div>
-      </div><!-- l-form -->
+    <div class="p-contact-sub__form p-form">
+      <div class="p-form__inner">
+        <!-- ショートカットでフォーム挿入 -->
+        <?php echo do_shortcode('[contact-form-7 id="36" title="お問い合わせ"]'); ?>
+      </div>
     </div>
   </div>
 </section><!-- l-contact-sub -->
